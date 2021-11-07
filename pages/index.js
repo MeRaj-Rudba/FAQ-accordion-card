@@ -49,9 +49,9 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <div class="attribution">
+        <div className="attribution">
           Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">
             Frontend Mentor
           </a>
           . Coded by <a href="#">Your Name Here</a>.
