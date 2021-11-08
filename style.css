@@ -3,6 +3,9 @@
 :root {
   --ff: "Kumbh Sans", sans-serif;
 }
-body{
-    font-family: var(--ff);
+body {
+  font-family: var(--ff);
+}
+.accordion {
+  border: 1px solid black;
 }

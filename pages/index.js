@@ -41,17 +41,25 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {
-          questions?questions.map((qstn,idx)=><Questions
-          key={idx} data={qstn}/>):<p>No Questions</p>
-        }
-        
+        <div className="faqs">
+          <div className="background-div">
+            <div className="img-background-div"></div>
+          </div>
+          <h1 className="main-title">FAQ</h1>
+          <div className="question-div">
+            {questions ? (
+              questions.map((qstn, idx) => <Questions key={idx} data={qstn} />)
+            ) : (
+              <p>No Questions</p>
+            )}
+          </div>
+        </div>
       </main>
 
       <footer className={styles.footer}>
         <div className="attribution">
           Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
             Frontend Mentor
           </a>
           . Coded by <a href="#">Your Name Here</a>.

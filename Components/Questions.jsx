@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const Questions = (props) => {
-    const { title, content } = props.data;
+  const { title, content } = props.data;
+  const [show, setShow] = useState(false);
+  const handleShowDetails = () => {
+    setShow(!show);
+  };
 
+  return (
+    <div className="accordion">
+      <div className="accordion-item">
+        <div className="accordion-title">
+          <div className="question">
+            <p className={show?"bold-text":"normal-text"}>{title}</p>
 
-    return (
-        <div className="accordion">
-        <div className="accordion-item">
-          <div className="accordion-title">
-            <div>{title}</div>
-            {/* <div>+</div> */}
+            <div
+              onClick={handleShowDetails}
+              className={show ? "arrow-up" : "arrow-down"}
+            ></div>
           </div>
-          <div className="accordion-content">{content}</div>
+        </div>
+        <div
+          className={show ? "accordion-content-show" : "accordion-content-hide"}
+        >
+          {content}
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Questions;
