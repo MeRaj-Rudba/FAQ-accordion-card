@@ -43,27 +43,38 @@ export default function Home() {
       <main className={styles.main}>
         <div className="faqs">
           <div className="background-div">
-            <div className="img-background-div"></div>
+            <div className="img-background-div">
+              <div className="cool-box-div"></div>
+            </div>
           </div>
-          <h1 className="main-title">FAQ</h1>
+
           <div className="question-div">
-            {questions ? (
-              questions.map((qstn, idx) => <Questions key={idx} data={qstn} />)
-            ) : (
-              <p>No Questions</p>
-            )}
+            <h1 className="main-title">FAQ</h1>
+            <div className="all-questions">
+              {questions ? (
+                questions.map((qstn, idx) => (
+                  <Questions key={idx} data={qstn} />
+                ))
+              ) : (
+                <p>No Questions</p>
+              )}
+            </div>
           </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <div className="attribution">
-          Challenge by
+        <p className="attribution">
+          Challenge by{" "}
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
             Frontend Mentor
           </a>
-          . Coded by <a href="#">Your Name Here</a>.
-        </div>
+          . Coded by{" "}
+          <a target="_blank" href="https://rudba.vercel.app/">
+            MeRaj Rudba
+          </a>
+          .
+        </p>
       </footer>
     </div>
   );

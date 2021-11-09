@@ -12,7 +12,7 @@ const Questions = (props) => {
       <div className="accordion-item">
         <div className="accordion-title">
           <div className="question">
-            <p className={show?"bold-text":"normal-text"}>{title}</p>
+            <p  onClick={handleShowDetails} className={show?"bold-text":"normal-text"}>{title}</p>
 
             <div
               onClick={handleShowDetails}
