@@ -66,11 +66,11 @@ export default function Home() {
       <footer className={styles.footer}>
         <p className="attribution">
           Challenge by{" "}
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener" rel="noreferrer">
             Frontend Mentor
           </a>
           . Coded by{" "}
-          <a target="_blank" href="https://rudba.vercel.app/">
+          <a target="_blank" rel="noopener" rel="noreferrer" href="https://rudba.vercel.app/">
             MeRaj Rudba
           </a>
           .
